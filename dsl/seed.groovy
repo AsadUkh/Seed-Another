@@ -46,7 +46,7 @@ def buildPipelineJobs() {
     fh = new File('./distance.csv')
 	def csv_content = fh.getText('utf-8')
 	def data_iterator = parseCsv(csv_content, readFirstLine: true)
-	def repo = []
+//	def repo = []
 	def job = []
 	for (line in data_iterator) {
 	createDeploymentJob(line[0], line[1])

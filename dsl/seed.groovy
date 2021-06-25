@@ -44,7 +44,7 @@ def buildPipelineJobs() {
     def testName = jobName + "_test"
 	def Wks = "%WORKSPACE%"
 
-    fh = new File('$Wks/dsl/repos.csv')
+    fh = new File('./repos.csv')
 	def csv_content = fh.getText('utf-8')
 	def data_iterator = parseCsv(csv_content, readFirstLine: true)
 //	def repo = []

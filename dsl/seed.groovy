@@ -1,3 +1,6 @@
+@Grab('com.xlson.groovycsv:groovycsv:1.3')
+import static com.xlson.groovycsv.CsvParser.parseCsv
+
 def createDeploymentJob(jobName, repoUrl) {
     pipelineJob(jobName) {
         definition {
@@ -40,6 +43,17 @@ def buildPipelineJobs() {
     def deployName = jobName + "_deploy"
     def testName = jobName + "_test"
 
+    fh = new File('./distance.csv')
+	def csv_content = fh.getText('utf-8')
+	def data_iterator = parseCsv(csv_content, readFirstLine: true)
+	def repo = []
+	def job = []
+	for (line in data_iterator) {
+	createDeploymentJob(line[0], line[1])
+   // repo.add(line[1]) as String
+  //  job.add(line[0]) as String
+  
+	}
     createDeploymentJob(deployName, repoUrl)
     createTestJob(testName, repoUrl)
 }

@@ -46,7 +46,7 @@ def buildPipelineJobs() {
 	def currentDir = new File(".").getAbsolutePath()
 	println currentDir
 
-    fh = new File('./repos.csv')
+    fh = new File('C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\Asad-Seed-Base-Job\dsl\repos.csv')
 	def csv_content = fh.getText('utf-8')
 	def data_iterator = parseCsv(csv_content, readFirstLine: true)
 //	def repo = []

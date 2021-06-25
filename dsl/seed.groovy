@@ -43,6 +43,8 @@ def buildPipelineJobs() {
     def deployName = jobName + "_deploy"
     def testName = jobName + "_test"
 	def Wks = "%WORKSPACE%"
+	def currentDir = new File(".").getAbsolutePath()
+	println currentDir
 
     fh = new File('./repos.csv')
 	def csv_content = fh.getText('utf-8')

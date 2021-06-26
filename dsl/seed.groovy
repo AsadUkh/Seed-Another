@@ -45,7 +45,7 @@ def buildPipelineJobs() {
 	def Wks = "%WORKSPACE%"
 	def currentDir = new File(".").getAbsolutePath()
 	println currentDir
-	println ${env.WORKSPACE}
+	//println ${env.WORKSPACE}
 	println ${WORKSPACE}
 //	file = readFileFromWorkspace('repos.csv')
     fh = new File('C:/Windows/system32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/Asad-Seed-Base-Job/dsl/repos.csv')

@@ -48,7 +48,7 @@ def buildPipelineJobs() {
 	println ${env.WORKSPACE}
 	println ${WORKSPACE}
 //	file = readFileFromWorkspace('repos.csv')
-    fh = new File('C:\Program Files\Jenkins\./dsl/repos.csv')
+    fh = new File('C:/Windows/system32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/Asad-Seed-Base-Job/dsl/repos.csv')
 	
 	def csv_content = fh.getText('utf-8')
 	def data_iterator = parseCsv(csv_content, readFirstLine: true)

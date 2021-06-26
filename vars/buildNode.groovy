@@ -8,7 +8,13 @@ def call(body)
             {
 	        pipeline
             {
-                agent { dockerfile true }
+                agent {
+					docker {
+						dockerfile true
+						label 'docker-agent'
+							}
+						}
+				
                 stages 
                 {
                     stage('Test') 

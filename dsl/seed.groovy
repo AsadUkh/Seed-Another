@@ -45,7 +45,7 @@ def buildPipelineJobs() {
 	def Wks = "%WORKSPACE%"
 	def currentDir = new File(".").getAbsolutePath()
 	println currentDir
-	file = readFileFromWorkspace('repos.csv')
+//	file = readFileFromWorkspace('repos.csv')
     fh = new File('${WORKSPACE}/dsl/repos.csv')
 	
 	def csv_content = fh.getText('utf-8')

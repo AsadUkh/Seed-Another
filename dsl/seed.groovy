@@ -45,8 +45,10 @@ def buildPipelineJobs() {
 	def Wks = "%WORKSPACE%"
 	def currentDir = new File(".").getAbsolutePath()
 	println currentDir
+	println ${env.WORKSPACE}
+	println ${WORKSPACE}
 //	file = readFileFromWorkspace('repos.csv')
-    fh = new File('${WORKSPACE}/dsl/repos.csv')
+    fh = new File('C:\Program Files\Jenkins\./dsl/repos.csv')
 	
 	def csv_content = fh.getText('utf-8')
 	def data_iterator = parseCsv(csv_content, readFirstLine: true)

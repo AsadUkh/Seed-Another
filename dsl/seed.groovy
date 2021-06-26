@@ -60,8 +60,8 @@ def buildPipelineJobs() {
   //  job.add(line[0]) as String
   
 	}
-    createDeploymentJob(deployName, repoUrl)
-    createTestJob(testName, repoUrl)
+  //  createDeploymentJob(deployName, repoUrl)
+  //  createTestJob(testName, repoUrl)
 }
 
 buildPipelineJobs()

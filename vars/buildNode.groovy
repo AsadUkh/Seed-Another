@@ -10,7 +10,7 @@ def call(body)
             {
                 agent {
 			docker {
-				dockerfile true
+				label 'docker-agent'
 					}
 				}
 				

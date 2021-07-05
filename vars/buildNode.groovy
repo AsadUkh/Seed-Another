@@ -4,10 +4,8 @@ def call(body)
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = pipelineParams
         body()
-        if (${pipelineParams.deployTo} == 'node') 
-            {
-	        pipeline
-            {
+     //   if (${pipelineParams.deployTo} == 'node') {
+	    pipeline {
                 agent {
 			dockerfile {
 				label 'docker-agent'
@@ -26,7 +24,6 @@ def call(body)
                             }
                         }
                 }
-            }
-	
-	    }
+            }	
+	// }
  }

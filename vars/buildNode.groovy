@@ -9,11 +9,10 @@ def call(body)
 	        pipeline
             {
                 agent {
-					docker {
-						dockerfile true
-						label 'docker-agent'
-							}
-						}
+			docker {
+				dockerfile true
+					}
+				}
 				
                 stages 
                 {

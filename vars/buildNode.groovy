@@ -9,8 +9,9 @@ def call(body)
 	        pipeline
             {
                 agent {
-			docker {
+			dockerfile {
 				label 'docker-agent'
+                                filename 'Dockerfile'
 					}
 				}
 				
